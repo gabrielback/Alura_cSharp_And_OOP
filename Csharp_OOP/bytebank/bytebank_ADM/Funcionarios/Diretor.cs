@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Funcionario
+    public class Diretor
     {
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public double Salario { get; set; }
 
-       
+
         public double GetBonificacao()
         {
-            return Salario * 0.10;
+            return Salario;
         }
 
         public override string ToString()
@@ -24,15 +24,16 @@ namespace bytebank_ADM.Funcionarios
 Nome: {Nome}
 Cpf: {Cpf}
 Salário: {Salario}
-Bonificação: {GetBonificacao()/Salario*100}% = R${GetBonificacao()}
+Bonificação: {GetBonificacao() / Salario * 100}% = R${GetBonificacao()}
 ";
         }
 
-        public Funcionario()
+
+        public Diretor()
         {
         }
 
-        public Funcionario(string nome, string cpf, double salario)
+        public Diretor(string nome, string cpf, double salario)
         {
             Nome = nome;
             Cpf = cpf;
