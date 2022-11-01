@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
         public string Nome { get; private set; }
         public string Cpf { get;private set; }
@@ -28,15 +28,10 @@ namespace bytebank_ADM.Funcionarios
         }
 
         // Public virtual serve para reescrever o método nas classes herdeiras com a palavra reservada override
-        public virtual double GetBonificacao()
-        {
-            return Salario * 0.10;
-        }
+        public abstract double GetBonificacao();
 
-        public virtual void AumentarSalario()
-        {
-            Salario *= 1.1;
-        }
+        public abstract void AumentarSalario();
+
         public override string ToString()
         {
             return $@"
