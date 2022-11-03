@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bytebank_ADM.SistemaInterno;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor:Funcionario
+    public class Diretor:FuncionarioAutenticavel
     {
-
-
         public Diretor(string nome, string cpf, double salario):base(nome, cpf, salario)
         {
 
@@ -22,5 +21,6 @@ namespace bytebank_ADM.Funcionarios
         {
             Salario *= 1.15;
         }
+
     }
 }

@@ -14,6 +14,7 @@ namespace bytebank_ADM.Funcionarios
         // Protected serve para acessar o atributo na classe base e nas classes herdeiras
         public double Salario { get;protected set; }
 
+
         public static int TotalDeFuncionarios { get;private set; }
 
 
@@ -31,6 +32,7 @@ namespace bytebank_ADM.Funcionarios
         public abstract double GetBonificacao();
 
         public abstract void AumentarSalario();
+
 
         public override string ToString()
         {
